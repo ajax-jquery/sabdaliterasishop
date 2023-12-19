@@ -6,7 +6,7 @@ layout : null
  {% for post in site.posts %}
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-      {% assign beatles = site.time %}
+      {% assign beatles = site.time | date: "%Y-%m-%d" %}
                <lastmod>{{ post.date | timeago: beatles | date_to_xmlschema }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
