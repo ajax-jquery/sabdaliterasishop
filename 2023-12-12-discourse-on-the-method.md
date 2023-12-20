@@ -1,6 +1,6 @@
 ---
 layout: page
-author: Margaret Walters
+author: Rene Descartes
 title: Diskursus dan Metode (Discourse on the Method)
 buy: https://lynk.id/sabdaliterasi/m38womW
 harga: Rp29.500
