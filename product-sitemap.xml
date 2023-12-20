@@ -12,13 +12,13 @@ layout : null
   {% assign TahunNggak = Hasilo | date: "%Y" %}
   {% assign HariNggak = Hasilo | date: "%d" %}
   {{ TahunNggak }}---{{ HariNggak }}---{{ TahunNormal }}---{{ HariNormal }}
-  {% assign bebe = Hasilo | replace: TahunNggak , TahunNormal %}
-  {% assign baba = bebe | replace: HariNggak , HariNormal  %}
+  {% assign caraI = Hasilo | replace: TahunNggak , TahunNormal %}
+  {% assign caraII = caraI | replace: HariNggak , HariNormal  %}
   {% assign akhirnyaaaaaaaaa = akhirnya | date_to_xmlschema  %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ baba }}</lastmod>
+               <lastmod>{{ caraII }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
