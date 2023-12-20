@@ -5,13 +5,19 @@ layout : null
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  {% for post in site.posts %}
   {% assign i = forloop.index | plus: 3 %}
-  {% assign kk = site.date | plus: i | date_to_xmlschema %}
-  {% assign ku = "now" | date: "%Y" %}
+  
+  {% assign kk = site.date | date_to_xmlschema %}
+  
+  {% assign Tsekarang = "now" | date: "%Y" %}
+  
+   {% assign JamNow = "now" | date: "%j" %}
+  
    {% assign kb = kk | date: "%Y" %}
+  {% assign JamDulu = kk | date: "%j" | minus: i  %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ kk | replace: kb , ku }}</lastmod>
+               <lastmod>{{ kk | replace: kb , Tsekarang | replace: JamDulu , JamNow }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
