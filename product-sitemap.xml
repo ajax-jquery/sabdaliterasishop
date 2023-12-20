@@ -6,8 +6,8 @@ layout : null
  {% for post in site.posts %}
   {% assign i = forloop.index | plus: 3 %}
   
-  {% assign kk = site.date | date_to_xmlschema %}
-  {% assign noww = "now" | date: "%Y-%m-%d %H:%M" | date_to_xmlschema %}
+  {% assign kk = site.date %}
+  {% assign noww = "now" | date: "%Y-%m-%d %H:%M"  %}
   {% assign Tsekarang = noww | date: "%Y" %}
   {% assign JamNow = Tsekarang | date: "%j" %}
  
@@ -16,7 +16,7 @@ layout : null
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ kk | replace: kb , Tsekarang | replace: JamDulu , JamNow }}</lastmod>
+               <lastmod>{{ site.time }}---{{ post.date }}--- {{ "now" | date }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
