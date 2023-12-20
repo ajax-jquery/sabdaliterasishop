@@ -16,7 +16,7 @@ layout : null
   {% assign HariNggak = Hasilo | date: "%d" %}
   {% assign caraI = Hasilo | replace: TahunNggak , TahunNormal %}
   {% assign caraII = caraI | replace: HariNggak , HariNormal  %}
-  {% assign akhirnyaaaaaaaaa = akhirnya | date_to_xmlschema  %}
+  {% assign akhirnyaaaaaaaaa = caraII  %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
