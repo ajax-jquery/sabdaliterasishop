@@ -15,7 +15,7 @@ layout : null
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ Hasil | date_to_xmlschema }}</lastmod>
+               <lastmod>{{ akhirnya | date_to_xmlschema }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
