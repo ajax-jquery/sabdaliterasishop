@@ -6,12 +6,13 @@ layout : null
  {% for post in site.posts %}
   {% assign i = forloop.index | plus: 3 %}
   
-  {% assign kk = site.date %}
+  {% assign Acak = site.time | date: "%H:%M:%S" %}
+  {% assign Tidak = post.date | date: "%H:%M:%S" %}
 
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ site.time }}---{{ post.date }}---- {{ "now" | date: "%Y-%m-%d %H:%M:%S -0400" }}</lastmod>
+               <lastmod>{{ post.date | replace: Tidak , Acak  | date_to_xmlschema }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
