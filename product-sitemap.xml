@@ -6,12 +6,12 @@ layout : null
  {% for post in site.posts %}
   {% assign i = forloop.index | plus: 10 %}
   
-  {% assign TahunNormal = site.time | date: "%Y" %}
-  {% assign HariNormal = site.time | date: "%d" %}
+  {% assign TahunNormal = "now" | date: "%Y" %}
+  {% assign HariNormal = "now" | date: "%d" %}
   {% assign Hasilo =  site.time | plus: i %}
   {% assign TahunNggak = Hasilo | date: "%Y" %}
   {% assign HariNggak = Hasilo | date: "%d" %}
-  
+  {{ TahunNggak }}---{{ HariNggak }}
   {% assign akhirnya = Hasilo | replace: TahunNggak , TahunNormal | replace: HariNggak , HariNormal  %}
   {% assign akhirnyaaaaaaaaa = akhirnya | date_to_xmlschema  %}
   
