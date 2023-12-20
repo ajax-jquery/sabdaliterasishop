@@ -21,7 +21,7 @@ Melewati parameter kedua:
     {% assign beatless = page.date %}
 <p>{{ site.time }}</p>
 {% for k in site.posts %}
-<p>{{ k.date | timeago: site.time }}</p>
+<p>{{ k.date | timeago: site.time | date_to_xmlschema }}</p>
     {% endfor %}
 <p>Click me too!</p>
 <p>If you click on me, I will disappear.</p>
