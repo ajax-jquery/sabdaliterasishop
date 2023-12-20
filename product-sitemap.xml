@@ -10,7 +10,7 @@ layout : null
   {% assign HariNormal = "now" | date: "%d" %}
   {% assign BulanNormal = "now" | date: "%m" %}
   
-  {% assign Hasilo =  site.time | %H:%M:%S | plus: i %}
+  {% assign Hasilo =  site.time | date: "%H:%M:%S" | plus: i %}
   {% assign TahunNggak = Hasilo | date: "%Y" %}
   {% assign HariNggak = Hasilo | date: "%d" %}
   {{ TahunNggak }}---{{ HariNggak }}---{{ TahunNormal }}---{{ HariNormal }}
