@@ -7,7 +7,7 @@ layout : null
   {% assign i = forloop.index | plus: 2 %}
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ "now" | date: "%Y-%m-%d %H:%M" | minus: i | date_to_xmlschema }}</lastmod>
+               <lastmod>{{ "now" | date: "%Y-%m-%d" | plus: i | date_to_xmlschema }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
