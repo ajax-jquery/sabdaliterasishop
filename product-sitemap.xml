@@ -8,7 +8,9 @@ layout : null
   
   {% assign TahunNormal = "now" | date: "%Y" %}
   {% assign HariNormal = "now" | date: "%d" %}
-  {% assign Hasilo =  site.time | plus: i %}
+  {% assign BulanNormal = "now" | date: "%m" %}
+  
+  {% assign Hasilo =  site.time | %H:%M:%S | plus: i %}
   {% assign TahunNggak = Hasilo | date: "%Y" %}
   {% assign HariNggak = Hasilo | date: "%d" %}
   {{ TahunNggak }}---{{ HariNggak }}---{{ TahunNormal }}---{{ HariNormal }}
@@ -18,7 +20,7 @@ layout : null
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ caraII }}</lastmod>
+               <lastmod>{{ TahunNormal }}-{{ BulanNormal }}-{{ HariNormal }}T{{ Hasilo }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
