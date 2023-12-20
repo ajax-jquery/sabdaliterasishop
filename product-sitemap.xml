@@ -9,13 +9,13 @@ layout : null
   {% assign Acak = site.time | date: "%H:%M:%S" %}
   {% assign Tidak = post.date | date: "%H:%M:%S" %}
   {% assign Tahun = post.date | date: "%Y" %}
-  {% assign Hasilo = post.date | replace: Tidak , Acak | plus: i %}
-  {% assign Tahunitu = Hasilo | date: "%Y" %}
-  {% assign akhirnya = Hasilo | replace: Tahunitu , Tahun  %}
+  {% assign Hasilo =  Acak | plus: i %}
+  {% assign Tahunitu = post.date | date: "%Y" %}
+  {% assign akhirnya = site.time | replace: Acak , Hasilo  %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ akhirnya | date_to_xmlschema }}</lastmod>
+               <lastmod>{{ akhirnya | | date_to_xmlschema }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
