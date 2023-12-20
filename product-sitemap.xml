@@ -8,7 +8,7 @@ layout : null
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ site.time }}anj{{ post.date }}anj{{ "now" | date }}</lastmod>
+               <lastmod>{{ site.time }}anj{{ post.date }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
