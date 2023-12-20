@@ -9,7 +9,7 @@ layout : null
   {% assign Acak = site.time | date: "%H:%M:%S" %}
   {% assign Tidak = post.date | date: "%H:%M:%S" %}
   {% assign Hasilo =  Acak | plus: i %}
-  {% assign akhirnya = site.time | replace: Tidak , Hasilo  %}
+  {% assign akhirnya = site.time | replace: Acak, Hasilo  %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
