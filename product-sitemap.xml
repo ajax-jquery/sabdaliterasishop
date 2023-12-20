@@ -5,9 +5,11 @@ layout : null
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  {% for post in site.posts %}
   {% assign i = forloop.index | plus: 0 %}
+  {% assign kk = site.date | date: "%j" | plus: i %}
+  {% assign bb = site.date | date: "%Y" %}
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ post.date | plus: i | date_to_xmlschema }}</lastmod>
+               <lastmod>{{ bb | kk | date_to_xmlschema }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
