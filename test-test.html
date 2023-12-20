@@ -17,8 +17,9 @@ $(document).ready(function(){
 <body><script src="//cdn.firebase.com/js/client/2.2.1/firebase.js"></script> {{ site.posts | size | times: 4 }}
 <p>{{ 10000000 | money: "IDR" }}</p>
 Melewati parameter kedua:
-
-<p>{{ site.time | timeago(Date.today.next_day(7)) | date_to_xmlschema }}</p>
+{% assign beatles = site.posts %}
+    {% assign beatless = beatles.date %}
+<p>{{ site.time | timeago: beatless }}</p>
 timeago(Date.today)
 <p>Click me away!</p>
 <p>Click me too!</p>
