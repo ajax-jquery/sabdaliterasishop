@@ -10,13 +10,8 @@ layout : null
   {% assign HariNormal = "now" | date: "%d" %}
   {% assign BulanNormal = "now" | date: "%m" %}
   
-  {% assign Hasilo =  site.time | date: "%H:%M:%S" | plus: i %}
-  {% assign TahunNggak = Hasilo | date: "%Y" %}
-  {% assign HariNggak = Hasilo | date: "%d" %}
-  {{ TahunNggak }}---{{ HariNggak }}---{{ TahunNormal }}---{{ HariNormal }}
-  {% assign caraI = Hasilo | replace: TahunNggak , TahunNormal %}
-  {% assign caraII = caraI | replace: HariNggak , HariNormal  %}
-  {% assign akhirnyaaaaaaaaa = akhirnya | date_to_xmlschema  %}
+  {% assign Hasilo =  site.time | plus: i %}
+
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
