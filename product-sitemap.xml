@@ -7,12 +7,11 @@ layout : null
   {% assign i = forloop.index | plus: 3 %}
   
   {% assign kk = site.date | date_to_xmlschema %}
-  
-  {% assign Tsekarang = "now" | date: "%Y" %}
-  
-   {% assign JamNow = "now" | date: "%j" %}
-  
-   {% assign kb = kk | date: "%Y" %}
+  {% assign noww = "now" | date: "%Y-%m-%d %H:%M" | date_to_xmlschema %}
+  {% assign Tsekarang = noww | date: "%Y" %}
+  {% assign JamNow = Tsekarang | date: "%j" %}
+ 
+  {% assign kb = kk | date: "%Y" %}
   {% assign JamDulu = kk | date: "%j" | minus: i  %}
   
     <url>
