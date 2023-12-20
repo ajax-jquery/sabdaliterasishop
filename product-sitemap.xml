@@ -4,19 +4,11 @@ layout : null
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="{{ site.url }}/sitemaps.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  {% for post in site.posts %}
-  {% assign i = forloop.index | plus: 3 %}
   
-  {% assign kk = site.date %}
-  {% assign noww = "now" | date: "%Y-%m-%d %H:%M"  %}
-  {% assign Tsekarang = noww | date: "%Y" %}
-  {% assign JamNow = Tsekarang | date: "%j" %}
- 
-  {% assign kb = kk | date: "%Y" %}
-  {% assign JamDulu = kk | date: "%j" | minus: i  %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ site.time }}---{{ post.date }}--- {{ "now" | date }}</lastmod>
+               <lastmod>{{ site.time }}anj{{ post.date }}anj{{ "now" | date }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
