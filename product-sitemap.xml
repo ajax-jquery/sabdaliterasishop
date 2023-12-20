@@ -6,10 +6,10 @@ layout : null
  {% for post in site.posts %}
   {% assign i = forloop.index | minus: 10 %}
   
-  {% assign Acak = site.time | date: "%H:%M:%S" %}
-  {% assign Tidak = post.date | date: "%H:%M:%S" %}
-  {% assign Hasilo =  Acak | plus: i %}
-  {% assign akhirnya = site.time | replace: Acak, Hasilo  %}
+  {% assign Normal = site.time | date: "%Y-%m-%d" %}
+  {% assign Hasilo =  site.time | plus: i %}
+   {% assign Nggak = Hasilo | date: "%Y-%m-%d" %}
+  {% assign akhirnya = Hasilo | replace: Nggak, Normal %}
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
