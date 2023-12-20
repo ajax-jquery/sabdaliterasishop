@@ -20,8 +20,9 @@ Melewati parameter kedua:
 
     {% assign beatless = page.date %}
 <p>{{ site.time }}</p>
-timeago(Date.today)
-<p>Click me away!</p>
+{% for k in site.posts %}
+<p>{{ k.date | timeago: site.time }}</p>
+    {% endfor %}
 <p>Click me too!</p>
 <p>If you click on me, I will disappear.</p>
 <p>Click me away!</p>
