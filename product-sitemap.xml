@@ -12,7 +12,7 @@ layout : null
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
 <changefreq>weekly</changefreq>
-<priority>0.8</priority>
+<priority>{{ i }}</priority>
     </url>
     {% endfor %}
 
