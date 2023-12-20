@@ -20,7 +20,7 @@ layout : null
   
     <url>
         <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-               <lastmod>{{ TahunNormal }}-{{ BulanNormal }}-{{ HariNormal }}T{{ Hasilo }}</lastmod>
+               <lastmod>{{ akhirnyaaaaaaaaa }}</lastmod>
         <image:image>
                 <image:loc>{{ post.image }}</image:loc>
         </image:image>
