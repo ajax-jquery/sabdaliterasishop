@@ -8,9 +8,7 @@ layout : null
   
   {% assign Acak = site.time | date: "%H:%M:%S" %}
   {% assign Tidak = post.date | date: "%H:%M:%S" %}
-  {% assign Tahun = post.date | date: "%Y" %}
   {% assign Hasilo =  Acak | plus: i %}
-  {% assign Tahunitu = post.date | date: "%Y" %}
   {% assign akhirnya = site.time | replace: Acak , Hasilo  %}
   
     <url>
